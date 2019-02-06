@@ -13,6 +13,7 @@
 
 // set global vars
 var leaf;
+var price = document.getElementById.innerHTML;
 // var leaf = "${CUSTOM_MODEL_LEAF_NAME}";
 var leaftype;
 var data;
@@ -24,16 +25,25 @@ var url = window.location.href;
 // window.addEventListener("resize", buildAd);
 
 // check for leaf query string
-if (url.indexOf("leaf") > -1) {
-  leaf = url.substring(url.indexOf("=") + 1);
-}
-else {
-  leaf = 0;
-}
+// if (url.indexOf("leaf") > -1) {
+//   leaf = url.substring(url.indexOf("=") + 1);
+// }
+// else {
+//   leaf = 0;
+// }
 
 // if (leaf == "${CUSTOM_MODEL_LEAF_NAME}") {
 //   leaf = 0;
 // }
+
+if (price < 1000) {
+  leaf = 0;
+  console.log('price=' + price);
+}
+else {
+  leaf = 1;
+  console.log('price=' + price);
+}
 
 // get and parse json data
 (function getData() {

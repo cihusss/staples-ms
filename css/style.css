@@ -34,7 +34,7 @@ body {
 }
 
 #ad * {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 #logo {
@@ -102,5 +102,9 @@ body {
   text-align: right;
   background: black;
   padding: 0 2px;
+  display: none;
+}
+
+#key { 
   display: none;
 }
