@@ -13,7 +13,7 @@
 
 // set global vars
 var leaf;
-var price = document.getElementById.innerHTML;
+var price = document.getElementById('key').innerHTML;
 // var leaf = "${CUSTOM_MODEL_LEAF_NAME}";
 var leaftype;
 var data;
