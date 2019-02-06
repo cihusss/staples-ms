@@ -31,6 +31,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   border: 1px solid #b1b1b1;
   opacity: 0;
+  width: 970px;
+  height: 66;
 }
 
 #ad * {
