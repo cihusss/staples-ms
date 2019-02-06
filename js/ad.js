@@ -39,7 +39,7 @@ else {
 (function getData() {
 
   var request = new XMLHttpRequest();
-  request.open('GET', 'https://github.com/cihusss/staples-ms/blob/master/json/matrix.json', true);
+  request.open('GET', 'https://cihusss.github.io/staples-ms/json/matrix.json', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
