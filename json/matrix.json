@@ -1,59 +1,30 @@
 {
   "data": [
     {
-      "LEAF": 0,
-      "AUDIENCE": "deal_seeker",
-      "SEGMENT_ID": "tbd",
-      "CHANNEL": "desktop",
-      "HEADLINE_1": "Generic fallback headline",
-      "HEADLINE_2": "Enjoy your bonus value on any Ziploc brand item",
-      "CTA": "Save Now",
-      "BACKGROUND_IMAGE": "img/bg00.jpg",
-      "URL": "https://www.officedepot.com/a/products/520824/Ziploc-Double-Zipper-Gal-Storage-Bags/"
+      "leaf": 0,
+      "audience": "cheap",
+      "segment": "tbd",
+      "channel": "desktop",
+      "headline": "Save $20",
+      "subhead": "When you buy a new laptop for your home.",
+      "image": "img/product01.png",
+      "price_reg": "$79.99",
+      "price_disc": "$49.99",
+      "cta": "Add to cart",
+      "url": "https://www.staples.com"
     },
     {
-      "LEAF": 1,
-      "AUDIENCE": "parent",
-      "SEGMENT_ID": "tbd",
-      "CHANNEL": "desktop",
-      "HEADLINE_1": "Save up to $5",
-      "HEADLINE_2": "Limited 4 per session",
-      "CTA": "Save Now",
-      "BACKGROUND_IMAGE": "img/bg01.jpg",
-      "URL": "https://www.officedepot.com/a/products/520824/Ziploc-Double-Zipper-Gal-Storage-Bags/"
-    },
-    {
-      "LEAF": 2,
-      "AUDIENCE": "foodie",
-      "SEGMENT_ID": "tbd",
-      "CHANNEL": "desktop",
-      "HEADLINE_1": "Buy One Get One",
-      "HEADLINE_2": "Look for cupon on the HEB home page",
-      "CTA": "Save Now",
-      "BACKGROUND_IMAGE": "img/bg02.jpg",
-      "URL": "https://www.heb.com/?exp=instoreview"
-    },
-    {
-      "LEAF": 3,
-      "AUDIENCE": "travel",
-      "SEGMENT_ID": "tbd",
-      "CHANNEL": "mobile",
-      "HEADLINE_1": "$22 Instant Savings",
-      "HEADLINE_2": "On any Ziploc brand item",
-      "CTA": "Save Now",
-      "BACKGROUND_IMAGE": "img/bg03.jpg",
-      "URL": "https://www.officedepot.com/a/products/520824/Ziploc-Double-Zipper-Gal-Storage-Bags/"
-    },
-    {
-      "LEAF": 4,
-      "AUDIENCE": "teen",
-      "SEGMENT_ID": "tbd",
-      "CHANNEL": "mobile",
-      "HEADLINE_1": "Save up to $5",
-      "HEADLINE_2": "Limit 4 per session",
-      "CTA": "Save Now",
-      "BACKGROUND_IMAGE": "img/bg04.jpg",
-      "URL": "https://www.officedepot.com/a/products/520824/Ziploc-Double-Zipper-Gal-Storage-Bags/"
+      "leaf": 1,
+      "audience": "expensive",
+      "segment": "tbd",
+      "channel": "desktop",
+      "headline": "Save $40",
+      "subhead": "When you buy a new laptop for your business.",
+      "image": "img/product01.png",
+      "price_reg": "$99.99",
+      "price_disc": "$79.99",
+      "cta": "Add to cart",
+      "url": "https://www.staples.com"
     }
   ]
 }

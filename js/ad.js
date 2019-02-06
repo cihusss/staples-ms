@@ -12,8 +12,8 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // set global vars
-// var leaf;
-var leaf = "${CUSTOM_MODEL_LEAF_NAME}";
+var leaf;
+// var leaf = "${CUSTOM_MODEL_LEAF_NAME}";
 var leaftype;
 var data;
 var wrapperWidth;
@@ -24,16 +24,16 @@ var url = window.location.href;
 // window.addEventListener("resize", buildAd);
 
 // check for leaf query string
-// if (url.indexOf("leaf") > -1) {
-//   // leaf = url.substring(url.indexOf("=") + 1);
-// }
-// else {
-//   leaf = 0;
-// }
-
-if (leaf == "${CUSTOM_MODEL_LEAF_NAME}") {
+if (url.indexOf("leaf") > -1) {
+  leaf = url.substring(url.indexOf("=") + 1);
+}
+else {
   leaf = 0;
 }
+
+// if (leaf == "${CUSTOM_MODEL_LEAF_NAME}") {
+//   leaf = 0;
+// }
 
 // get and parse json data
 (function getData() {
@@ -79,14 +79,20 @@ function buildAd(event) {
   }
 
   // set up dynamic content vars
-  var headline = data.data[leaf].HEADLINE_1;
-  var cta = data.data[leaf].CTA;
-  // var url = data.data[leaf].URL;
-  var bg = data.data[leaf].BACKGROUND_IMAGE;
+  var headline = data.data[leaf].headline;
+  var subhead = data.data[leaf].subhead;
+  var image = data.data[leaf].image;
+  var priceReg = data.data[leaf].price_reg;
+  var priceDisc = data.data[leaf].price_disc;
+  var cta = data.data[leaf].cta;
+  // var url = data.data[leaf].url;
 
   document.getElementById("headline").innerHTML = headline;
+  document.getElementById("subhead").innerHTML = subhead;
+  document.getElementById("image").src = image;
+  document.getElementById("price-reg").innerHTML = priceReg;
+  document.getElementById("price-disc").innerHTML = priceDisc;
   document.getElementById("cta").innerHTML = cta;
-  document.getElementById("ad").style.backgroundImage = "url(" + bg + ")";
  
   // get wrapper width
   wrapperWidth = document.getElementById("wrapper").parentNode.offsetWidth;
@@ -116,40 +122,21 @@ function buildAd(event) {
 function styleAd(event) {
 
   switch(wrapperWidth + wrapperHeight) {
-    
-    // 728x90
-    case 818:
-      document.getElementById("headline").style.fontSize = "20px";
-      document.getElementById("headline").style.marginBottom = "8px";
-      document.getElementById("cta").style.padding = "4px 16px";
-      document.getElementById("action-box").style.width = "auto";
-      document.getElementById("action-box").style.height = "100%";
-      document.getElementById("action-box").style.padding = "12px 16px";
-      break;
 
-    // 970x90
-    case 1030:
-      document.getElementById("action-box").style.flexDirection = "row";
-      document.getElementById("headline").style.alignSelf = "center";
-      document.getElementById("headline").style.fontSize = "18px";
-      document.getElementById("headline").style.margin = "0 12px 0 0";
-      document.getElementById("cta-wrapper").style.alignSelf = "center";
-      document.getElementById("logo").style.width = "36px";
-      document.getElementById("action-box").style.width = "auto";
-      break;
-
-    // 300x50
-    case 350:
-      document.getElementById("headline").style.margin = "0 0 2px 0";
-      document.getElementById("headline").style.fontSize = "10px";
-      document.getElementById("cta").style.padding = "2px 8px";
-      document.getElementById("cta").style.fontSize = "10px";
-      document.getElementById("action-box").style.width = "auto";
-      document.getElementById("action-box").style.padding = "6px 12px";
-      document.getElementById("logo").style.width = "27px"
+    // 970x66
+    case 1036:
+      // document.getElementById("headline").style.flexDirection = "row";
       break;
   }
 
   document.getElementById("ad").style.opacity = "1";
 
 }
+
+//add to cart
+
+function pushToCart(event) {
+    parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":"1117060","quantity":1,"catEntryId":""}, {"partNumber":"1117060","quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
+}
+
+document.getElementById("cta").addEventListener('click', pushToCart);

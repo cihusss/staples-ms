@@ -23,57 +23,73 @@ body {
 
 #ad {
   box-sizing: border-box;
-  /*background: url("../img/bg.jpg");*/
-  background-size: cover;
-  background-position: center center;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   border: 1px solid #b1b1b1;
   opacity: 0;
 }
 
-#headline { margin: 0 0 12px 0;
-  line-height: 1.2em;
-  font-size: 22px;
-  font-weight: 300;
-  color: #000;
+#ad * {
+  margin: 0 15px;
 }
 
 #logo {
-  position: absolute;
-  top: 12px;
+  display: block;
+  top: 18px;
   left: 12px;
-  width: 50px;
+  width: 140px;
 }
 
-#action-box {
-  display: flex;
-  align-items: flex-start;
-  justify-content: left;
-  flex-direction: column;
-  box-sizing: border-box;
-  background: rgba(255,255,255,0.9);
+#headline {
+  display: block;
+  line-height: 1.2em;
+  font-size: 28px;
+  font-weight: 300;
+  color: #333;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+#subhead {
+  display: block;
+  color: #333;
   text-align: left;
-  width: 100%;
-  padding: 16px;
 }
 
-#cta-wrapper {
+#image {
+  display: block;
+  height: 100px;
+  margin-top: 40px;
+}
 
+#price-reg {
+  color: #333;
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+#price-disc {
+  color: #cc0000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 0;
 }
 
 #cta {
-  background: #185FC3;
+  background: #cc0000;
   display: inline-block;
   padding: 8px 16px;
-  border-radius: 20px;
   font-size: 16px;
   font-weight: bold;
   color: white;
+  white-space: nowrap;
+  cursor: pointer;
+
 }
 
 #value {
@@ -85,4 +101,5 @@ body {
   text-align: right;
   background: black;
   padding: 0 2px;
+  display: none;
 }
