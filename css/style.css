@@ -83,12 +83,14 @@ body {
 #cta {
   background: #cc0000;
   display: inline-block;
-  padding: 8px 16px;
-  font-size: 16px;
+  padding: 9px 16px 11px;
+  font-size: 12px;
   font-weight: bold;
   color: white;
   white-space: nowrap;
   cursor: pointer;
+  min-width: 140px;
+
 
 }
 
