@@ -96,6 +96,7 @@ function buildAd(event) {
   var priceReg = data.data[leaf].price_reg;
   var priceDisc = data.data[leaf].price_disc;
   var cta = data.data[leaf].cta;
+  var sku = data.data[leaf].sku;
   // var url = data.data[leaf].url;
 
   document.getElementById("headline").innerHTML = headline;
@@ -147,7 +148,7 @@ function styleAd(event) {
 //add to cart
 
 function pushToCart(event) {
-    parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":"1117060","quantity":1,"catEntryId":""}, {"partNumber":"1117060","quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
+    parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":sku,"quantity":1,"catEntryId":""}, {"partNumber":sku,"quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
 }
 
 document.getElementById("cta").addEventListener('click', pushToCart);

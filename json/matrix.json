@@ -11,7 +11,8 @@
       "price_reg": "$79.99",
       "price_disc": "$49.99",
       "cta": "Add to cart",
-      "url": "https://www.staples.com"
+      "url": "https://www.staples.com",
+      "sku": "1916211"
     },
     {
       "leaf": 1,
@@ -24,7 +25,8 @@
       "price_reg": "$99.99",
       "price_disc": "$79.99",
       "cta": "Add to cart",
-      "url": "https://www.staples.com"
+      "url": "https://www.staples.com",
+      "sku": "1916212"
     }
   ]
 }
