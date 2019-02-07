@@ -21,6 +21,7 @@ var data;
 var wrapperWidth;
 var wrapperHeight;
 var url = window.location.href;
+var sku;
 
 // resizing listener event
 // window.addEventListener("resize", buildAd);
@@ -96,7 +97,7 @@ function buildAd(event) {
   var priceReg = data.data[leaf].price_reg;
   var priceDisc = data.data[leaf].price_disc;
   var cta = data.data[leaf].cta;
-  var sku = data.data[leaf].sku;
+  sku = data.data[leaf].sku;
   // var url = data.data[leaf].url;
 
   document.getElementById("headline").innerHTML = headline;
