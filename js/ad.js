@@ -149,7 +149,8 @@ function styleAd(event) {
 //add to cart
 
 function pushToCart(event) {
-    parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":sku,"quantity":1,"catEntryId":""}, {"partNumber":sku,"quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
+    // parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":sku,"quantity":1,"catEntryId":""}, {"partNumber":sku,"quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
+    parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":sku,"quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
 }
 
 document.getElementById("cta").addEventListener('click', pushToCart);
