@@ -51,7 +51,7 @@ switch(true) {
     console.log('price=' + price);
     break;
 
-  case(price == 'NaN'):
+  case(price == NaN):
     leaf = 0;
     console.log('price=' + price);
     break;
