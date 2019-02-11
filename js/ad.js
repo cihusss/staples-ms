@@ -38,32 +38,14 @@ var sku;
 //   leaf = 0;
 // }
 
-switch(true) {
-
-  case(price < 1000):
-    leaf = 0;
-    console.log('price=' + price);
-    break;
-
-  case(price > 1000):
-    leaf = 1;
-    console.log('price=' + price);
-    break;
-
-  case(price == 'NaN'):
-    leaf = 0;
-    console.log('price=' + price);
-    break;
+if (price < 1000) {
+  leaf = 0;
+  console.log('price=' + price);
 }
-
-// if (price < 1000) {
-//   leaf = 0;
-//   console.log('price=' + price);
-// }
-// else {
-//   leaf = 1;
-//   console.log('price=' + price);
-// }
+else {
+  leaf = 1;
+  console.log('price=' + price);
+}
 
 // get and parse json data
 (function getData() {
