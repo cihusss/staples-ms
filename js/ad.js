@@ -15,6 +15,7 @@
 var leaf;
 var price = document.getElementById('key').innerHTML;
 price = parseInt(price);
+console.log(price);
 // var leaf = "${CUSTOM_MODEL_LEAF_NAME}";
 var leaftype;
 var data;
@@ -38,20 +39,39 @@ var sku;
 //   leaf = 0;
 // }
 
-if (price < 1000) {
-  leaf = 0;
-  console.log('price=' + price);
+switch(true) {
+
+  case(price < 1000):
+    leaf = 0;
+    console.log('price=' + price);
+    break;
+
+  case(price > 1000):
+    leaf = 1;
+    console.log('price=' + price);
+    break;
+
+  case(price == 'NaN'):
+    leaf = 0;
+    console.log('price=' + price);
+    break;
 }
-else {
-  leaf = 1;
-  console.log('price=' + price);
-}
+
+// if (price < 1000) {
+//   leaf = 0;
+//   console.log('price=' + price);
+// }
+// else {
+//   leaf = 1;
+//   console.log('price=' + price);
+// }
 
 // get and parse json data
 (function getData() {
 
   var request = new XMLHttpRequest();
   request.open('GET', 'https://cihusss.github.io/staples-ms/json/matrix.json', true);
+  // request.open('GET', 'json/matrix.json', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
