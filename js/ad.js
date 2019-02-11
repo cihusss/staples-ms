@@ -15,7 +15,6 @@
 var leaf;
 var price = document.getElementById('key').innerHTML;
 price = parseInt(price);
-console.log(price);
 // var leaf = "${CUSTOM_MODEL_LEAF_NAME}";
 var leaftype;
 var data;
@@ -71,7 +70,6 @@ switch(true) {
 
   var request = new XMLHttpRequest();
   request.open('GET', 'https://cihusss.github.io/staples-ms/json/matrix.json', true);
-  // request.open('GET', 'json/matrix.json', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
