@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>1:1 Flexible on steroids within locked wrapper</title>
-  <link rel="stylesheet" href="https://cihusss.github.io/staples-ms/css/style.css">
+  <link rel="stylesheet" href="" id="css">
 </head>
-<body>
+<body id="body">
   <div id="wrapper">
     <div id="buffer">
-      <div id="ad">
+      <div id="ad" style="opacity:0">
         <div id="key">%%PATTERN:prodprice%%</div>
         <img src="https://cihusss.github.io/staples-ms/img/logo.png" id="logo">
         <h2 id="headline">Headline goes here</h2>
@@ -23,6 +23,27 @@
       </div>
     </div>
   </div>
-  <script src="https://cihusss.github.io/staples-ms/js/ad.js"></script>
+  <!-- <script src="" id="js"></script> -->
+  <script>
+    var script = document.createElement('script');
+    var cssurl = 'css/style.css';
+    var jsurl = 'js/ad.js';
+    var projecturl = 'https://cihusss.github.io/staples-ms/'
+    var hostname = window.location.hostname;
+    
+    if (hostname == 'playground.local') {
+      cssurl = cssurl;
+      jsurl = 'js/ad.js';
+      console.log(jsurl);
+    }
+    else {
+      cssurl = projecturl + cssurl;
+      jsurl = projecturl + jsurl;
+    }
+
+    script.src = jsurl;
+    document.getElementById('css').href = cssurl;
+    document.getElementById('body').appendChild(script);
+  </script>
 </body>
 </html>
