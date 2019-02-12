@@ -50,8 +50,17 @@ else {
 // get and parse json data
 (function getData() {
 
+  var url;
+
+  if (window.location.hostname == 'playground.local') {
+    url = 'json/matrix.json';
+  }
+  else {
+    url = 'https://cihusss.github.io/staples-ms/json/matrix.json';
+  }
+
   var request = new XMLHttpRequest();
-  request.open('GET', 'https://cihusss.github.io/staples-ms/json/matrix.json', true);
+  request.open('GET', url, true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
