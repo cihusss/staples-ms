@@ -100,6 +100,7 @@ function buildAd(event) {
   }
 
   // set up dynamic content vars
+  var logo = data.data[leaf].logo;
   var headline = data.data[leaf].headline;
   var subhead = data.data[leaf].subhead;
   var image = data.data[leaf].image;
@@ -109,6 +110,7 @@ function buildAd(event) {
   sku = data.data[leaf].sku;
   // var url = data.data[leaf].url;
 
+  document.getElementById("logo").src = logo;
   document.getElementById("headline").innerHTML = headline;
   document.getElementById("subhead").innerHTML = subhead;
   document.getElementById("image").src = image;
