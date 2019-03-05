@@ -10,20 +10,28 @@
     <div id="buffer">
       <div id="ad" style="opacity:0">
         <div id="key">%%PATTERN:prodprice%%</div>
-        <img src="https://cihusss.github.io/staples-ms/img/logo.png" id="logo">
+        <img src="img/logo.png" id="logo">
         <h2 id="headline">Headline goes here</h2>
         <p id="subhead">Subhead goes here</p>
         <img id="image" src="">
-        <span id="price-reg"></span>
-        <span id="price-disc"></span>
-        <div id="cta-wrapper">
-          <div id="cta">cta</div>
+        <ul id="bullets">
+          <li><span>Up to 6 people</span></li>
+          <li><span>PC/Mac 12 Month Subscription</span></li>
+          <li><span>1TB Cloud Storage</span></li>
+        </ul>
+        <div id="prices">
+          <span id="price-reg"></span>
+          <span id="price-disc"></span>
         </div>
+        <a href="javascript:window.open(window.clickTag)" id="cta-wrapper">
+          <div id="cta">cta</div>
+        </a>
         <div id="value"></div>
       </div>
     </div>
   </div>
   <script>
+    var clickTag = "http://www.google.com";
     var script = document.createElement('script');
     var cssurl = 'css/style.css';
     var jsurl = 'js/ad.js';

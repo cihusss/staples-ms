@@ -34,50 +34,72 @@ body {
 }
 
 #ad * {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 #logo {
-  display: block;
-  top: 18px;
-  left: 12px;
-  width: 120px;
+  width: 92px;
+  margin-left: 15px;
 }
 
 #headline {
   display: block;
-  line-height: 1.2em;
+  line-height: 1.2;
   font-size: 28px;
   font-weight: 300;
-  color: #333;
+  color: #cc0000;
   white-space: nowrap;
   font-weight: bold;
+  vertical-align: middle;
+  margin: -4px 10px 0 10px;
 }
 
 #subhead {
-  display: block;
   color: #333;
   text-align: left;
+  font-size: 14px;
+  line-height: 1.3em;
 }
 
 #image {
   display: block;
-  height: 100px;
-  margin-top: 40px;
+  width: 87px;
+  margin-top: -1px;
+}
+
+#bullets {
+  text-align: left;
+  font-size: 11px;
+  min-width: 190px;
+  margin: 0 -30px 0px 10px;
+  padding: 0 0px 0 15px;
+}
+
+#bullets li {
+  margin: 0px 0px 0px 0px;
+}
+
+#bullets li span {
+    margin: 0 0 0 -5px !important;
+}
+
+#prices {
+  text-align: left;
+  margin: 0 0 0 10px;
 }
 
 #price-reg {
   color: #333;
   font-size: 14px;
   text-decoration: line-through;
-  margin-right: 10px;
+  margin: 0;
 }
 
 #price-disc {
   color: #cc0000;
   font-size: 18px;
   font-weight: bold;
-  margin-left: 0;
+  margin: 0;
 }
 
 #cta {
@@ -100,6 +122,10 @@ body {
   border: 1px solid #cc0000;
   transition: all .2s ease-in;
   border-radius: 3px;
+}
+
+#cta-wrapper {
+    margin: 0 3px 0 3px;
 }
 
 #value {
