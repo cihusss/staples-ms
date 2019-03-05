@@ -39,11 +39,11 @@ var sku;
 // }
 
 if (price < 1000) {
-  leaf = 0;
+  leaf = 1;
   console.log('price=' + price);
 }
 else {
-  leaf = 0;
+  leaf = 1;
   console.log('price=' + price);
 }
 
