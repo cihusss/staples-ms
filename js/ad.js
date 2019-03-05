@@ -43,7 +43,7 @@ if (price < 1000) {
   console.log('price=' + price);
 }
 else {
-  leaf = 1;
+  leaf = 0;
   console.log('price=' + price);
 }
 
