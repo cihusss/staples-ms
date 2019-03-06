@@ -56,7 +56,7 @@ else {
     url = 'json/matrix.json';
   }
   else {
-    url = 'https://static-clients.secure.footprint.net/Staples/48_MIC_W4251/json/matrix.json';
+    url = 'https://cihusss.github.io/staples-ms/json/matrix.json';
   }
 
   var request = new XMLHttpRequest();
