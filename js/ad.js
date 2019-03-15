@@ -11,6 +11,8 @@
 //           __/_____\____\___/      written by teo
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+console.log(projecturl);
+
 // set global vars
 var leaf;
 var price = document.getElementById('key').innerHTML;
@@ -56,7 +58,7 @@ else {
     url = 'json/matrix.json';
   }
   else {
-    url = 'https://cihusss.github.io/staples-ms/json/matrix.json';
+    url = projecturl + '/json/matrix.json';
   }
 
   var request = new XMLHttpRequest();
@@ -159,9 +161,22 @@ function styleAd(event) {
 
 //add to cart
 
+function injectPixel(pixel) {
+    var img = document.createElement("img");
+    var src = document.createAttribute("src");
+    src.value = '<img src="https://pubads.g.doubleclick.net/activity;xsp=4456667;ord=1" width=1 height=1 border=0>'; 
+    img.setAttributeNode(src);
+    img.setAttribute("id", "pixel");
+    document.getElementById("ad").appendChild(img);
+    // alert('bam');
+}
+
 function pushToCart(event) {
     // parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":sku,"quantity":1,"catEntryId":""}, {"partNumber":sku,"quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
     parent.STAPLES.cartOverlay.addtoCartAjax([{"partNumber":sku,"quantity":1,"catEntryId":""}], -1, undefined, undefined, "en-US");
+    // document.write('<img src="https://pubads.g.doubleclick.net/activity;xsp=4456667;ord=1" width=1 height=1 border=0>');
+    // document.getElementById("ad").innerHTML = '<img src="https://pubads.g.doubleclick.net/activity;xsp=4456667;ord=1" width=1 height=1 border=0>';
+    injectPixel();
 }
 
 document.getElementById("cta").addEventListener('click', pushToCart);
