@@ -164,7 +164,9 @@ function styleAd(event) {
 function injectPixel(pixel) {
     var img = document.createElement("img");
     var src = document.createAttribute("src");
-    src.value = '<img src="https://pubads.g.doubleclick.net/activity;xsp=4456667;ord=1" width=1 height=1 border=0>'; 
+    var axel = Math.random();
+    var a = Math.round(axel * 10000000000000);
+    src.value = 'https://pubads.g.doubleclick.net/activity;xsp=4456667;ord=1' + a; 
     img.setAttributeNode(src);
     img.setAttribute("id", "pixel");
     document.getElementById("ad").appendChild(img);
